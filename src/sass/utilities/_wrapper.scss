@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    Wrappers
+\*------------------------------------*/
+
+.site-wrapper {
+    // max-width: 108rem;
+    // margin: 0 auto;
+}
+
+.content-wrapper {
+    position: relative;
+    max-width: 108rem;
+    margin: 0 auto;
+    padding: var(--col-pd-wrapper);
+}
+
+.content-inner {
+    padding: var(--col-pd-inner);
+}

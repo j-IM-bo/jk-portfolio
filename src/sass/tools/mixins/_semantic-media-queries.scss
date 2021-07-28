@@ -1,0 +1,86 @@
+/*------------------------------------*\
+    Semantic Media Queries
+    - https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/
+    - https://jonsuh.com/blog/managing-responsive-breakpoints-with-sass-maps/
+
+    - Usage
+        .your-class {
+            wdith: 50%;
+
+            @include bp(medium) {
+                width: 100%;
+            }
+        }
+
+    - OR
+        @include bp(medium) {
+            .your-class {
+                width: 100%;
+            }
+        }
+
+\*------------------------------------*/
+
+/*------------------------------------*\
+    Horizontal min
+\*------------------------------------*/
+@mixin bp($bp-breakpoint, $bp-breakpoints: $breakpoints) {
+    @if map-has-key($bp-breakpoints, $bp-breakpoint) {
+        $bp-breakpoint: map-get($bp-breakpoints, $bp-breakpoint);
+    }
+
+    @media screen and (min-width: #{$bp-breakpoint}) {
+        @content;
+    }
+}
+
+/*------------------------------------*\
+    Vertical min
+\*------------------------------------*/
+@mixin bpVert(
+    $bpVert-verticalBreakpoint,
+    $bpVert-verticalBreakpoints: $verticalBreakpoints
+) {
+    @if map-has-key($bpVert-verticalBreakpoints, $bpVert-verticalBreakpoint) {
+        $bpVert-verticalBreakpoint: map-get(
+            $bpVert-verticalBreakpoints,
+            $bpVert-verticalBreakpoint
+        );
+    }
+
+    @media screen and (min-height: #{$bpVert-verticalBreakpoint}) {
+        @content;
+    }
+}
+
+/*------------------------------------*\
+    Horizontal max
+\*------------------------------------*/
+@mixin bpMax($bp-breakpoint, $bp-breakpoints: $breakpoints) {
+    @if map-has-key($bp-breakpoints, $bp-breakpoint) {
+        $bp-breakpoint: map-get($bp-breakpoints, $bp-breakpoint);
+    }
+
+    @media screen and (max-width: #{$bp-breakpoint}) {
+        @content;
+    }
+}
+
+/*------------------------------------*\
+    Vertical max
+\*------------------------------------*/
+@mixin bpVertMax(
+    $bpVert-verticalBreakpoint,
+    $bpVert-verticalBreakpoints: $verticalBreakpoints
+) {
+    @if map-has-key($bpVert-verticalBreakpoints, $bpVert-verticalBreakpoint) {
+        $bpVert-verticalBreakpoint: map-get(
+            $bpVert-verticalBreakpoints,
+            $bpVert-verticalBreakpoint
+        );
+    }
+
+    @media screen and (max-height: #{$bpVert-verticalBreakpoint}) {
+        @content;
+    }
+}

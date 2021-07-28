@@ -1,0 +1,88 @@
+/*------------------------------------*\
+    SASS Imports
+    - https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+\*------------------------------------*/
+
+/*------------------------------------*\
+    Tools
+    - globally used sass vars, mixins
+    & functions
+\*------------------------------------*/
+/*------------------------------------*\
+    Variables
+\*------------------------------------*/
+@import "tools/variables/breakpoints";
+@import "tools/variables/colors";
+@import "tools/variables/font-vars";
+@import "tools/variables/z-index";
+@import "tools/variables/spacing";
+@import "tools/variables/transitions";
+
+/*------------------------------------*\
+    Mixins
+\*------------------------------------*/
+@import "tools/mixins/semantic-media-queries";
+@import "tools/mixins/z-index-mi";
+@import "tools/mixins/font-size";
+@import "tools/mixins/generic-mixins";
+
+/*------------------------------------*\
+    Generic
+    - reset and/or normalize styles,
+    box-sizing definition, etc.
+\*------------------------------------*/
+@import "generic/normalize";
+@import "generic/button-reset";
+@import "generic/box-sizing";
+@import "generic/pseudo";
+
+/*------------------------------------*\
+    Plugins
+    - plugin default styles
+\*------------------------------------*/
+@import "plugins/flickity";
+
+/*------------------------------------*\
+    Elements
+    - styling for bare HTML
+    elements (like html, body, a, etc.).
+\*------------------------------------*/
+@import "elements/html";
+@import "elements/body";
+@import "elements/a";
+@import "elements/img";
+@import "elements/hr";
+@import "elements/button";
+@import "elements/ul";
+@import "elements/inputs";
+@import "elements/figure";
+@import "elements/video";
+@import "elements/iframe";
+
+/*------------------------------------*\
+    Utilities
+    - utilities and helper classes.
+\*------------------------------------*/
+@import "utilities/typography";
+@import "utilities/visibility";
+@import "utilities/wrapper";
+@import "utilities/no-box-sizing";
+@import "utilities/loadin";
+@import "utilities/keyframes";
+@import "utilities/grid";
+
+/*------------------------------------*\
+    Objects
+    - Styling for reusable elements
+    for use in multiple contexts
+    (special buttons i.e. close, hamburgers)
+\*------------------------------------*/
+@import "objects/menu-button";
+@import "objects/buttons";
+
+/*------------------------------------*\
+    Components
+\*------------------------------------*/
+
+@import "components/sections";
+@import "components/header";

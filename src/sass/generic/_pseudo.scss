@@ -1,0 +1,49 @@
+/*----------------------------------------------*\
+    Pseudo
+\*----------------------------------------------*/
+
+/*----------------------------------------------*\
+    Placeholder
+\*----------------------------------------------*/
+
+// ::-webkit-input-placeholder {
+
+// }
+
+// ::-moz-placeholder {
+
+// }
+
+// :-ms-input-placeholder {
+
+// }
+
+// :-moz-placeholder {
+
+// }
+
+/*----------------------------------------------*\
+    Select
+    - controls selection highlight colour
+\*----------------------------------------------*/
+
+::-moz-selection {
+    color: var(--c-light);
+    background-color: var(--c-primary);
+}
+
+::selection {
+    color: var(--c-light);
+    background-color: var(--c-primary);
+}
+
+/*----------------------------------------------*\
+    Focus
+\*----------------------------------------------*/
+
+:focus {
+    //outline-color: $c-red;
+    outline-style: dashed;
+    outline-width: 0.1rem;
+    outline-offset: 0.4rem;
+}

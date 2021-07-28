@@ -1,0 +1,39 @@
+/*------------------------------------*\
+    Semantic color variables
+    https://anotheruiguy.gitbooks.io/sassintherealworld_book-i/content/handy-tools/setting-variables.html
+\*------------------------------------*/
+:root {
+    //colors & brand
+
+    --primary: #e8e8e2;
+    --secondary: #1c1c1c;
+    --light-grey: #7d7d7d;
+
+    --black: #000000;
+    --white: #ffffff;
+
+    /*------------------------------------*\
+    Semantics
+    \*------------------------------------*/
+
+    //utilities
+    --c-lightest: var(--white);
+    --c-darkest: var(--black);
+    --c-placeholder: var(--light-grey);
+
+    //use pallet
+    --c-primary: var(--primary);
+    --c-secondary: var(--secondary);
+
+    //typography
+    //on dark backgrounds
+    --c-font-light: var(--secondary);
+    --c-font-light-2: var(--light-grey);
+
+    //on light backgrounds
+    --c-font-dark: var(--primary);
+
+    //backgrounds
+    --c-bg-light: var(--primary);
+    --c-bg-dark: var(--secondary);
+}

@@ -1,0 +1,60 @@
+/*------------------------------------*\
+   Menu button
+\*------------------------------------*/
+
+.menu-button {
+    position: absolute;
+    display: block;
+    width: 4.2rem;
+    height: 3.6rem;
+    top: 1.1rem;
+    right: 0.2rem;
+    pointer-events: auto;
+    @include z-index(level6);
+
+    &.is-working {
+        pointer-events: none;
+    }
+
+    @include bp(medium) {
+        display: none;
+    }
+}
+
+.x,
+.z {
+    position: absolute;
+    margin: auto;
+    left: 1.2rem;
+    background-color: var(--c-bg-light);
+    border-radius: 0;
+    height: 0.1rem;
+    width: 2.1rem;
+    transition: var(--transition);
+}
+
+.x {
+    top: 1.2rem;
+
+    .menu-is-active & {
+        top: 1.8rem;
+        transform: rotate(45deg);
+    }
+}
+
+// .y {
+//     top: 1.8rem;
+
+//     .menu-is-active & {
+//         opacity: 0;
+//     }
+// }
+
+.z {
+    top: 2.4rem;
+
+    .menu-is-active & {
+        top: 1.8rem;
+        transform: rotate(-45deg);
+    }
+}

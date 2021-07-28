@@ -1,0 +1,33 @@
+/*------------------------------------*\
+    Breakpoint Vars
+\*------------------------------------*/
+
+$breakpoints: (
+    small: (
+        60em * 0.625
+    ),
+    medium: (
+        90em * 0.625
+    ),
+    large: (
+        120em * 0.625
+    ),
+    x-large: (
+        180em * 0.625
+    )
+);
+
+$verticalBreakpoints: (
+    small: (
+        60em * 0.625
+    ),
+    medium: (
+        70em * 0.625
+    ),
+    large: (
+        80em * 0.625
+    ),
+    xlarge: (
+        90em * 0.625
+    )
+);

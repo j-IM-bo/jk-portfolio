@@ -1,0 +1,96 @@
+/*------------------------------------*\
+  SASS mixins
+\*------------------------------------*/
+
+/*------------------------------------*\
+     § Input placeholder
+\*------------------------------------*/
+
+@mixin input-placeholder {
+    &.placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}
+
+/*------------------------------------*\
+    Pseudo
+\*------------------------------------*/
+
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+/*------------------------------------*\
+  Flex wrapper
+\*------------------------------------*/
+
+@mixin flex-wrapper(
+    $justify: flex-start,
+    $wrap: wrap,
+    $align: stretch,
+    $direction: row
+) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+/*------------------------------------*\
+  Flex center
+\*------------------------------------*/
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*------------------------------------*\
+  Background image
+  - cover
+\*------------------------------------*/
+
+@mixin bg-cover {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/*------------------------------------*\
+  Background image
+  - contain
+\*------------------------------------*/
+
+@mixin bg-contain {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/*------------------------------------*\
+    Clearfix
+\*------------------------------------*/
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

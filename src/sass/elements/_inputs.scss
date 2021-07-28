@@ -1,0 +1,16 @@
+/*------------------------------------*\
+   Inputs
+\*------------------------------------*/
+
+input {
+    position: relative;
+    display: block;
+    border: none;
+    font-size: inherit;
+    width: 100%;
+    appearance: none;
+
+    &:focus {
+        outline: none;
+    }
+}

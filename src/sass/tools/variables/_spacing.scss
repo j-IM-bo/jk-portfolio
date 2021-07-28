@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    Spacing variables
+    - For generic block spacing try
+    to only use margin bottom
+    for consistancy
+\*------------------------------------*/
+:root {
+    /*------------------------------------*\
+    Paddings
+    \*------------------------------------*/
+    --col-pd-wrapper: 0 0.5rem;
+    --col-pd-inner: 0 0.5rem;
+
+    --col-pd-wrapper-small: 0 1rem;
+    --col-pd-inner-small: 0 1rem;
+
+    /*------------------------------------*\
+    Margins
+    \*------------------------------------*/
+    // --section-mb-sm: 3rem;
+    // --section-mb-md: 8rem;
+    // --section-mb-lg: 9rem;
+    // --section-mb-xl: 12rem;
+}

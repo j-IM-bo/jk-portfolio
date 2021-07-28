@@ -1,0 +1,10 @@
+/*------------------------------------*\
+    Transitions
+    - simple transisions for use
+    with UI elements
+\*------------------------------------*/
+:root {
+    --transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    --transition-fast: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}

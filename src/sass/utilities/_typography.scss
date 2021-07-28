@@ -1,0 +1,79 @@
+/*------------------------------------*\
+    Typography
+\*------------------------------------*/
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    margin: 0 0 3rem;
+}
+
+h1,
+.h1 {
+    @include f-xl();
+}
+
+h2,
+.h2 {
+    @include f-lg();
+}
+
+h3,
+.h3 {
+    @include f-md();
+}
+
+// h4,
+// .h4 {
+
+// }
+
+// h5,
+// .h5 {
+// }
+
+// h6, .h6 {
+
+// }
+
+p {
+    margin: 0 0 4rem 0;
+    @include f-reg();
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+/*------------------------------------*\
+    Additional utility classes
+\*------------------------------------*/
+
+.f-uc {
+    text-transform: uppercase;
+}
+
+.f-bold {
+    font-weight: 700;
+}
+
+.f-expanded-sm {
+    letter-spacing: 0.03rem;
+}
+
+.f-expanded-md {
+    letter-spacing: 0.04rem;
+}
+
+.f-expanded-lg {
+    letter-spacing: 0.4rem;
+}
