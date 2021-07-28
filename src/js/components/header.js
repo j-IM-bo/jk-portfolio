@@ -13,7 +13,7 @@ export function header() {
         .progress(1);
 
     ScrollTrigger.create({
-        start: "top top",
+        start: "center bottom",
         end: 99999,
         onUpdate: (self) => {
             self.direction === -1 ? showAnim.play() : showAnim.reverse();
