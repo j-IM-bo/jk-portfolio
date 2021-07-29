@@ -109,25 +109,62 @@
         </header>
 
         <main>
-            <section
-                id="profile"
-                class="section"
-                style="background-color: aqua"
-            ></section>
+            <section id="profile" class="section" data-color="#E8E8E2">
+                <div class="profile">
+                    <div class="profile__inner">
+                        <div class="profile__title">
+                            <h1>Now then!</h1>
+                            <h1>I'm James.</h1>
+                        </div>
+                        <div class="profile__about">
+                            <p>
+                                I’ve been working as a designer for the past six
+                                years. In that time I have worked on some
+                                amazing projects, learnt a lot, and met some
+                                great people along the way.
+                            </p>
+                            <p>
+                                I have been exploring front-end development and
+                                partaking in online courses and self-initiated
+                                learning. I am looking for a new challenge in a
+                                junior front-end role to accelerate my
+                                development and continue to grow both
+                                personally, and professionally.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cta__circle">
+                        <img src="./images/cta-circle.svg" alt="scroll down" />
+                        <span class="visually-hidden"
+                            >call to action - scroll down</span
+                        >
+                    </div>
+                </div>
+            </section>
             <section
                 id="front-end"
                 class="section"
-                style="background-color: aquamarine"
+                data-color="#1C1C1C"
+                style="height: 100vh; background-color: black"
             ></section>
-            <section id="design" class="section"></section>
+            <section
+                id="design"
+                class="section"
+                data-color="#E8E8E2"
+                style="height: 100vh"
+            ></section>
             <section
                 id="contact"
                 class="section"
-                style="background-color: bisque"
+                data-color="#1C1C1C"
+                style="height: 100vh"
             ></section>
         </main>
 
         <!-- footer -->
         <footer class="footer"></footer>
+
+        <!-- fill background between sections with margin - eg. portfolio  -->
+        <aside class="fill-background"></aside>
     </body>
 </html>

@@ -11,6 +11,11 @@ function init() {
     menu();
 }
 
+const updateBodyColor = (color) => {
+    gsap.to(".fill-background", { backgroundColor: color, ease: "none" });
+    document.documentElement.style.setProperty("--c-bg-light", color);
+};
+
 window.addEventListener("load", function () {
     init();
 });
