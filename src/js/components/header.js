@@ -8,12 +8,11 @@ export function header() {
         .from(".js-header", {
             yPercent: -100,
             paused: true,
-            duration: 0.3
+            duration: 0.2
         })
         .progress(1);
-
     ScrollTrigger.create({
-        start: "center bottom",
+        start: "top top",
         end: 99999,
         onUpdate: (self) => {
             self.direction === -1 ? showAnim.play() : showAnim.reverse();

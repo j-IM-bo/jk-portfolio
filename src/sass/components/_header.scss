@@ -37,20 +37,27 @@
     position: relative;
     display: block;
     margin-left: 2rem;
-    transition: var(--transition);
+    pointer-events: auto;
+    @include z-index(level6);
 
-    a {
-        font-weight: 700;
+    &.is-working {
+        pointer-events: none;
+    }
 
-        &:hover {
-            color: var(--c-font-light-2);
-        }
+    &.menu-is-active {
+        transition: var(--transition);
+        color: var(--c-font-light);
     }
 }
 
 .header__site-nav {
     position: relative;
     height: 100%;
+    display: none;
+
+    @include bp(medium) {
+        display: block;
+    }
 }
 .header__nav-list {
     display: flex;
@@ -80,20 +87,12 @@
         z-index: -1;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
         color: var(--c-font-dark);
         transition: var(--transition-slow);
         &::before {
             transform: scaleY(1);
         }
     }
-}
-
-.scroll {
-    height: 400vh;
-}
-
-.menu-button,
-.menu {
-    display: none;
 }

@@ -43,7 +43,7 @@
             <div class="header__inner">
                 <a
                     href="./index.html"
-                    class="header__site-link"
+                    class="header__site-link js-site-link"
                     aria-label="logo"
                 >
                     James Keefe
@@ -76,28 +76,55 @@
             </div>
 
             <!-- menu button object -->
-            <button class="menu-button js-menu-btn">
+            <button aria-label="menu-button" class="menu-button js-menu-btn">
                 <span class="x"></span>
-                <span class="y"></span>
                 <span class="z"></span>
                 <span class="visually-hidden">Menu</span>
             </button>
             <!-- menu component -->
-            <div class="menu js-menu">
+            <div aria-label="menu" class="menu js-menu">
                 <nav class="menu__nav">
                     <ul class="menu__list">
                         <li class="menu__list-item js-menu-item">
-                            <a href="#" class="menu__link">About</a>
+                            <a href="#profile" class="menu__link">Profile</a>
+                        </li>
+                        <li class="menu__list-item js-menu-item">
+                            <a href="#front-end" class="menu__link"
+                                >Front-end</a
+                            >
+                        </li>
+                        <li class="menu__list-item js-menu-item">
+                            <a href="#design" class="menu__link">Design</a>
+                        </li>
+                        <li class="menu__list-item js-menu-item">
+                            <a href="#contact" class="menu__link">Contact</a>
                         </li>
                     </ul>
                 </nav>
+                <div class="alien-icon js-alien-icon">
+                    <img src="./images/alien-icon-sm.svg" alt="alien icon" />
+                </div>
             </div>
             <!-- /end .menu-->
         </header>
 
         <main>
-            <div class="scroll"></div>
-            <div id="profile"></div>
+            <section
+                id="profile"
+                class="section"
+                style="background-color: aqua"
+            ></section>
+            <section
+                id="front-end"
+                class="section"
+                style="background-color: aquamarine"
+            ></section>
+            <section id="design" class="section"></section>
+            <section
+                id="contact"
+                class="section"
+                style="background-color: bisque"
+            ></section>
         </main>
 
         <!-- footer -->

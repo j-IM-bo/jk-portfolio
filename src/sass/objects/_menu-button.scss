@@ -7,8 +7,8 @@
     display: block;
     width: 4.2rem;
     height: 3.6rem;
-    top: 1.1rem;
-    right: 0.2rem;
+    top: 2.3rem;
+    right: 1.5rem;
     pointer-events: auto;
     @include z-index(level6);
 
@@ -25,12 +25,16 @@
 .z {
     position: absolute;
     margin: auto;
-    left: 1.2rem;
-    background-color: var(--c-bg-light);
+    left: 1rem;
+    background-color: var(--c-bg-dark);
     border-radius: 0;
-    height: 0.1rem;
-    width: 2.1rem;
+    height: 0.2rem;
+    width: 2.5rem;
     transition: var(--transition);
+
+    .menu-is-active & {
+        background-color: var(--c-bg-light);
+    }
 }
 
 .x {
@@ -39,16 +43,9 @@
     .menu-is-active & {
         top: 1.8rem;
         transform: rotate(45deg);
+        background-color: var(--c-bg-light);
     }
 }
-
-// .y {
-//     top: 1.8rem;
-
-//     .menu-is-active & {
-//         opacity: 0;
-//     }
-// }
 
 .z {
     top: 2.4rem;

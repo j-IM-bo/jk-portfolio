@@ -3,12 +3,12 @@ import "./sass/style.scss";
 
 //js
 // import { debounce } from "./js/utilities/debounce";
-// import { animateOnScroll } from "./js/utilities/aos";
-// import { menu } from "./js/menu";
+import { menu } from "./js/components/menu";
 import { header } from "./js/components/header";
 
 function init() {
     header();
+    menu();
 }
 
 window.addEventListener("load", function () {
