@@ -40,7 +40,7 @@
     Plugins
     - plugin default styles
 \*------------------------------------*/
-@import "plugins/flickity";
+// @import "plugins/flickity";
 
 /*------------------------------------*\
     Elements
@@ -84,7 +84,7 @@
     Components
 \*------------------------------------*/
 
-@import "components/sections";
 @import "components/header";
 @import "components/menu";
 @import "components/profile";
+@import "components/front-end";

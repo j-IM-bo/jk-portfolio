@@ -41,22 +41,22 @@
 }
 
 .cta__circle {
+    display: block;
     position: absolute;
     top: auto;
-    right: 3%;
+    right: 2rem;
+    bottom: -8rem;
     pointer-events: none;
     animation: rotation 45s linear infinite;
-    display: none;
 
     @include bp(small) {
-        display: block;
-        bottom: -4.5vw;
+        right: 6rem;
     }
     @include bp(medium) {
-        bottom: 5%;
+        right: 7rem;
     }
     @include bp(large) {
-        bottom: 5%;
+        right: 8rem;
     }
 }
 

@@ -5,16 +5,13 @@ import "./sass/style.scss";
 // import { debounce } from "./js/utilities/debounce";
 import { menu } from "./js/components/menu";
 import { header } from "./js/components/header";
+import { initPortfolioHover } from "./js/components/front-end";
 
 function init() {
-    header();
     menu();
+    header();
+    initPortfolioHover();
 }
-
-const updateBodyColor = (color) => {
-    gsap.to(".fill-background", { backgroundColor: color, ease: "none" });
-    document.documentElement.style.setProperty("--c-bg-light", color);
-};
 
 window.addEventListener("load", function () {
     init();

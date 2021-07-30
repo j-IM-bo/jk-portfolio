@@ -1,0 +1,96 @@
+/*------------------------------------*\
+    Front-end
+\*------------------------------------*/
+main {
+    z-index: 1;
+    position: relative;
+}
+
+.front-end {
+    position: relative;
+    width: 100vw;
+    margin-top: var(--v-spacing);
+}
+
+.fe__categories {
+    display: flex;
+    flex-direction: column;
+
+    a {
+        @include f-xl();
+        margin-left: 10vw;
+        padding: 1vh 0;
+        position: relative;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        transform: translateX(-5rem);
+
+        &::before {
+            content: "\21B3";
+            font-size: 2.5vw;
+            padding-right: 1vw;
+            height: auto;
+            position: relative;
+            display: block;
+            left: 0;
+            transform: translateX(-5rem);
+        }
+
+        &:hover {
+            z-index: 1;
+            transform: translateX(0);
+            transition: transform 0.3s ease-in-out;
+
+            &::before {
+                transform: translateX(0);
+            }
+        }
+    }
+}
+
+.fe__divider {
+    width: 100vw;
+    height: 0.1rem;
+    background: #1c1c1c;
+    display: block;
+}
+
+.fe__image {
+    pointer-events: none;
+    position: absolute;
+    overflow: hidden;
+    top: 0vh;
+    left: 40vw;
+    width: 28vw;
+    padding-bottom: 41.66vw;
+    background-color: #1c1c1c;
+    visibility: hidden;
+    display: none;
+
+    @include bp(medium) {
+        display: block;
+    }
+}
+.image_inside {
+    position: absolute;
+    opacity: 0.6;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    height: 115%;
+    background-size: cover;
+}
+
+.fill-background {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+.fe__par {
+    background: #1d1e25;
+    color: var(--c-font-light);
+}
