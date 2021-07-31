@@ -31,35 +31,43 @@ main {
 .fe__categories {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    margin: auto;
 
     a {
         @include f-xl();
-        margin-left: 10vw;
-        padding: 1vh 0;
+        padding: 1vh 10vw;
         position: relative;
         display: flex;
         align-items: center;
         overflow: hidden;
-        transform: translateX(-5rem);
+
+        @include bp(medium) {
+            padding: 1vh 7vw;
+        }
 
         &::before {
             content: "\21B3";
-            font-size: 2.5vw;
+            font-size: 4rem;
             padding-right: 1vw;
             height: auto;
             position: relative;
-            display: block;
+            opacity: 0;
             left: 0;
-            transform: translateX(-5rem);
+            display: none;
+
+            @include bp(medium) {
+                display: block;
+            }
         }
 
         &:hover {
             z-index: 1;
-            transform: translateX(0);
+            transform: translateX(3vw);
             transition: transform 0.3s ease-in-out;
 
             &::before {
-                transform: translateX(0);
+                opacity: 1;
             }
         }
     }
