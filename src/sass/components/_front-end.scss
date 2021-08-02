@@ -16,7 +16,6 @@ main {
     flex-direction: column;
     background: #1d1e25;
     color: var(--c-font-light);
-    padding: 15vh 10vw;
     margin-bottom: var(--v-spacing);
 
     @include bp(medium) {
