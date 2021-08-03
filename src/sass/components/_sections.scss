@@ -21,7 +21,14 @@ section {
     top: var(--v-spacing);
     z-index: 2;
     color: var(--c-font-dark);
-    font-size: 1.6vw;
+    font-size: 3.6vw;
+
+    @include bp(small) {
+        font-size: 2.6vw;
+    }
+    @include bp(medium) {
+        font-size: 1.6vw;
+    }
 }
 .chapter span {
     opacity: 0.4;

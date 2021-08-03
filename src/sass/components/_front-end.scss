@@ -4,40 +4,66 @@
 
 .front-end {
     .chapter {
-        top: calc(var(--v-spacing) * 2);
+        top: 2vh;
+    }
+
+    @include bp(medium) {
+        .chapter {
+            top: calc(var(--v-spacing) * 2);
+        }
+    }
+}
+
+.fe__intro {
+    width: calc(50vw + var(--h-gutter));
+    margin: var(--v-spacing) 33.33vw 0 var(--h-gutter);
+
+    p {
+        font-size: 1.4vw;
+        line-height: 1.6;
     }
 }
 
 .fixed-nav {
-    position: absolute;
-    top: calc(var(--v-spacing) * 3);
-    left: var(--h-gutter);
+    display: none;
 
-    li {
-        overflow: hidden;
-
-        &.is-active a {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-    a {
-        position: relative;
-        padding-left: 1.8vw;
-        transform: translateX(-1.8vw);
+    @include bp(medium) {
         display: block;
-        opacity: 0.4;
-        transition: var(--transition);
+        position: absolute;
+        top: calc(var(--v-spacing) * 3);
+        left: var(--h-gutter);
 
-        &::before {
-            @include pseudo();
-            height: 2px;
-            width: 1.3vw;
-            background-color: var(--c-bg-dark-1);
-            top: 50%;
-            left: 0;
+        li {
+            overflow: hidden;
+
+            &.is-active a {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        a {
+            position: relative;
+            padding-left: 1.8vw;
+            transform: translateX(-1.8vw);
+            display: block;
+            opacity: 0.4;
+            transition: var(--transition);
+
+            &::before {
+                @include pseudo();
+                height: 2px;
+                width: 1.3vw;
+                background-color: var(--c-bg-dark-1);
+                top: 50%;
+                left: 0;
+            }
         }
     }
+}
+
+.stage {
+    display: flex;
+    flex-direction: column;
 }
 
 .stage__heading {
@@ -47,27 +73,57 @@
     h3,
     p {
         position: absolute;
-        left: 25vw;
-        top: calc(var(--v-spacing) * -1.75);
-        font-size: 3.6vw;
+        left: var(--h-gutter);
+        top: calc(var(--v-spacing) * -0.7);
+        font-size: 5.6vw;
         margin: 0;
         white-space: nowrap;
     }
     p {
-        font-size: 1.6vw;
+        font-size: 3.6vw;
         opacity: 0.4;
-        top: calc(var(--v-spacing) * -2.25);
+        top: calc(var(--v-spacing) * -0.9);
+    }
+
+    @include bp(small) {
+        h3,
+        p {
+            top: calc(var(--v-spacing) * -1);
+            font-size: 3.6vw;
+        }
+        p {
+            font-size: 1.6vw;
+            top: calc(var(--v-spacing) * -1.25);
+        }
+    }
+
+    @include bp(medium) {
+        h3,
+        p {
+            left: 25vw;
+            top: calc(var(--v-spacing) * -1.75);
+            font-size: 3.6vw;
+        }
+        p {
+            font-size: 1.6vw;
+            top: calc(var(--v-spacing) * -2.25);
+        }
     }
 }
 
 .stage__image {
-    width: calc(50vw + var(--h-gutter));
-    margin: 0 var(--h-gutter) var(--v-spacing) 33.33vw;
-    padding-bottom: 33.33vw;
-    background-color: #000000;
     overflow: hidden;
     position: relative;
     z-index: 1; /* fix for Safari */
+    width: calc(100vw - var(--h-gutter));
+    margin: 0 auto 20vw;
+    padding-bottom: 40vh;
+
+    @include bp(medium) {
+        width: calc(50vw + var(--h-gutter));
+        margin: 0 var(--h-gutter) var(--v-spacing) 33.33vw;
+        padding-bottom: 33.33vw;
+    }
 }
 .stage__image img {
     height: 120%;
