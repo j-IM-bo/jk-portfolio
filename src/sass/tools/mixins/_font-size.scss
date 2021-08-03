@@ -2,105 +2,76 @@
     Font sizes
 \*------------------------------------*/
 
-//extra
+//extra large
 @mixin f-xl() {
-    font-size: 8vw;
-    line-height: 1.5;
-    letter-spacing: -0.3vw;
-    font-weight: 500;
+    font-size: 4rem;
+    line-height: 3.4rem;
+    letter-spacing: 0;
+    font-weight: 700;
 
     @include bp(small) {
-        font-size: 7vw;
-        line-height: 1.5;
+        font-size: 5rem;
+        line-height: 4.2rem;
     }
+
     @include bp(medium) {
-        font-size: 6vw;
-        line-height: 1.5;
-    }
-    @include bp(large) {
-        font-size: 4vw;
-        line-height: 1.5;
+        font-size: 7rem;
+        line-height: 6rem;
     }
 }
 
-//large h2
+//large
 @mixin f-lg() {
-    font-size: 1.6rem;
-    line-height: 2.6rem;
-    letter-spacing: -0.02rem;
-    font-weight: 300;
-    text-transform: uppercase;
+    font-size: 4rem;
+    line-height: 4rem;
+    letter-spacing: 0;
+    font-weight: 700;
 
-    // @include bp(small) {
-    //     font-size: 5.2rem;
-    //     line-height: 6rem;
-    //     letter-spacing: -2.86;
-    // }
-    // @include bp(medium) {
-    //     font-size: 6.2rem;
-    //     line-height: 7rem;
-    //     letter-spacing: -3.41;
-    // }
+    @include bp(large) {
+        font-size: 5rem;
+        line-height: 5rem;
+    }
 }
 
-//medium h3
+//medium
 @mixin f-md() {
-    font-size: 2.6rem;
-    line-height: 8rem;
-    letter-spacing: -0.08rem;
-    font-weight: 500;
+    font-size: 2rem;
+    line-height: 3.1rem;
+    letter-spacing: -0.065rem;
+    font-weight: 700;
 
-    @include bp(small) {
-        font-size: 4.2rem;
-        line-height: 10rem;
-        letter-spacing: -0.15rem;
-    }
     @include bp(medium) {
-        font-size: 5.2rem;
-        line-height: 11rem;
-        letter-spacing: -0.2rem;
-    }
-    @include bp(large) {
-        font-size: 7.2rem;
-        line-height: 13rem;
-        letter-spacing: -0.4rem;
+        font-size: 2.6rem;
+        line-height: 3.6rem;
     }
 }
 
 //small
-// @mixin f-sm() {
-//     font-size: 1.2rem;
-//     line-height: 1.7rem;
+@mixin f-sm() {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
 
-//     @include bp(medium) {
-//         font-size: 1.4rem;
-//         line-height: 1.9rem;
-//     }
-// }
+    @include bp(medium) {
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+    }
+}
 
 //extra small
-// @mixin f-xs() {
-//     font-size: 1.2rem;
-//     line-height: 2rem;
-// }
+@mixin f-xs() {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
 
 //body copy
 @mixin f-reg() {
-    font-size: 4.6vw;
-    line-height: 1.8;
-    letter-spacing: -0.1vw;
-    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: normal;
 
-    @include bp(small) {
-        font-size: 3vw;
-        line-height: 1.6;
-    }
     @include bp(medium) {
-        font-size: 2.8vw;
-    }
-    @include bp(large) {
-        font-size: 1.8vw;
-        line-height: 1.6;
+        font-size: 1.6rem;
+        line-height: 3rem;
     }
 }
 

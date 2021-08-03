@@ -2,23 +2,208 @@
    Buttons
 \*------------------------------------*/
 
+.btn {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    padding: 1.5rem;
+    border-radius: 4rem;
+    color: var(--c-font-lightest);
+    text-align: center;
+    @include f-sm();
+    line-height: 1.4rem;
+    transition: var(--transition);
+}
+
+//with border
+.btn--border {
+    &::after {
+        @include pseudo();
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% + 1.2rem);
+        height: calc(100% + 1.2rem);
+        border-radius: 4.4rem;
+        background-color: transparent;
+        transition: var(--transition);
+    }
+}
+
+//coral
+.btn--primary {
+    border: 0.1rem solid var(--c-primary);
+    background-color: var(--c-primary);
+
+    &.btn--border {
+        &::after {
+            border: 0.1rem solid var(--c-primary);
+        }
+    }
+
+    &:hover {
+        border-color: var(--c-primary);
+        background-color: transparent;
+
+        &.btn--border {
+            &::after {
+                border-color: transparent;
+            }
+        }
+    }
+}
+
+//blue
+.btn--secondary {
+    border: 0.1rem solid var(--c-secondary);
+    background-color: var(--c-secondary);
+
+    &.btn--border {
+        &::after {
+            border: 0.1rem solid var(--c-secondary);
+        }
+    }
+
+    &:hover {
+        background-color: transparent;
+
+        &.btn--border {
+            &::after {
+                border-color: transparent;
+            }
+        }
+    }
+}
+
+//white
+.btn--tertiary {
+    border: 0.1rem solid var(--c-bg-light-1);
+    background-color: var(--c-bg-light-1);
+    color: var(--c-font-dark-4);
+
+    &.btn--border {
+        &::after {
+            border: 0.1rem solid var(--c-bg-light-1);
+        }
+    }
+
+    &:hover {
+        background-color: transparent;
+
+        &.btn--border {
+            &::after {
+                border-color: transparent;
+            }
+        }
+
+        .btn__text {
+            color: var(--c-font-lightest);
+        }
+    }
+}
+
+//with icon
+.btn--icon {
+    height: 4.6rem;
+    padding: 1.5rem 5.2rem 1.5rem 4.2rem;
+
+    @include bp(small) {
+        height: unset;
+        padding: 1.5rem 5.6rem 1.5rem 4.6rem;
+    }
+
+    &:hover {
+        .btn__text {
+            &::after {
+                right: -3rem;
+            }
+        }
+    }
+}
+
+.btn--icon-lg {
+    @include bp(small) {
+        padding: 2rem 5.6rem 2rem 4.6rem;
+    }
+}
+
+//opaque
+.btn--opaque {
+    border: 0.1rem solid rgba(var(--c-bg-light-1), 0);
+    background-color: rgba(var(--c-bg-light-1), 0.2);
+
+    &.btn--border {
+        &::after {
+            border: 0.1rem solid rgba(var(--c-bg-light-1), 0.2);
+        }
+    }
+
+    &:hover {
+        border-color: var(--c-bg-light-1);
+        background-color: transparent;
+
+        &.btn--border {
+            &::after {
+                border-color: transparent;
+            }
+        }
+    }
+}
+
+//larger cta button
+.btn--cta {
+    width: fit-content;
+    padding: 1.5rem 4.6rem;
+    @include f-xs();
+
+    @include bp(small) {
+        padding: 2rem 3.6rem;
+    }
+}
+
+//btn text
+.btn__text {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    transition: var(--transition);
+
+    .btn--icon & {
+        &::after {
+            content: "\2192";
+            position: absolute;
+            display: block;
+            top: 50%;
+            right: -2.7rem;
+            transform: translateY(-50%);
+            width: 1.2rem;
+            @include font-size(1.2rem, 1rem);
+            transition: var(--transition);
+
+            @include bp(medium) {
+                @include font-size(1.4rem, 1rem);
+            }
+        }
+    }
+}
+
 //widths
-// .btn--w-none {
-//     width: fit-content;
-// }
+.btn--w-none {
+    width: fit-content;
+}
 
-// .btn--w-sm {
-//...
-// }
+.btn--w-sm {
+    //...
+}
 
-// .btn--w-md {
-//     min-width: 15.5rem;
-// }
+.btn--w-md {
+    min-width: 15.5rem;
+}
 
-// .btn--w-lg {
-//     min-width: 18.8rem;
-// }
+.btn--w-lg {
+    min-width: 18.8rem;
+}
 
-// .btn--w-xl {
-//     min-width: 24rem;
-// }
+.btn--w-xl {
+    min-width: 24rem;
+}

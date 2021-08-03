@@ -1,114 +1,75 @@
 /*------------------------------------*\
     Front-end
 \*------------------------------------*/
-main {
-    z-index: 1;
-    position: relative;
-}
 
 .front-end {
-    position: relative;
-    width: 100vw;
-}
-
-.fe__par {
-    display: flex;
-    flex-direction: column;
-    background: #1d1e25;
-    color: var(--c-font-light);
-    margin-bottom: var(--v-spacing);
-
-    @include bp(medium) {
-        flex-direction: row;
-        justify-content: space-between;
-        p {
-            max-width: 37vw;
-        }
+    .chapter {
+        top: calc(var(--v-spacing) * 2);
     }
 }
 
-.fe__categories {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: auto;
+.fixed-nav {
+    position: absolute;
+    top: calc(var(--v-spacing) * 3);
+    left: var(--h-gutter);
 
-    a {
-        @include f-xl();
-        padding: 1vh 10vw;
-        position: relative;
-        display: flex;
-        align-items: center;
+    li {
         overflow: hidden;
 
-        @include bp(medium) {
-            padding: 1vh 7vw;
+        &.is-active a {
+            transform: translateX(0);
+            opacity: 1;
         }
+    }
+    a {
+        position: relative;
+        padding-left: 1.8vw;
+        transform: translateX(-1.8vw);
+        display: block;
+        opacity: 0.4;
+        transition: var(--transition);
 
         &::before {
-            content: "\21B3";
-            font-size: 4rem;
-            padding-right: 1vw;
-            height: auto;
-            position: relative;
-            opacity: 0;
+            @include pseudo();
+            height: 2px;
+            width: 1.3vw;
+            background-color: var(--c-bg-dark-1);
+            top: 50%;
             left: 0;
-            display: none;
-
-            @include bp(medium) {
-                display: block;
-            }
-        }
-
-        &:hover {
-            z-index: 1;
-            transform: translateX(3vw);
-            transition: transform 0.3s ease-in-out;
-
-            &::before {
-                opacity: 1;
-            }
         }
     }
 }
 
-.fe__divider {
-    width: 100vw;
-    height: 0.1rem;
-    background: #1c1c1c;
-    display: block;
+.stage__heading {
+    position: relative;
+    z-index: 2; /* fix for Safari */
+
+    h3,
+    p {
+        position: absolute;
+        left: 25vw;
+        top: calc(var(--v-spacing) * -1.75);
+        font-size: 3.6vw;
+        margin: 0;
+        white-space: nowrap;
+    }
+    p {
+        font-size: 1.6vw;
+        opacity: 0.4;
+        top: calc(var(--v-spacing) * -2.25);
+    }
 }
 
-.fe__image {
-    pointer-events: none;
-    position: absolute;
+.stage__image {
+    width: calc(50vw + var(--h-gutter));
+    margin: 0 var(--h-gutter) var(--v-spacing) 33.33vw;
+    padding-bottom: 33.33vw;
+    background-color: #000000;
     overflow: hidden;
-    top: 62vh;
-    left: 40vw;
-    width: 28vw;
-    padding-bottom: 41.66vw;
-    background-color: #1c1c1c;
-    visibility: hidden;
-    display: none;
-
-    @include bp(medium) {
-        display: block;
-    }
+    position: relative;
+    z-index: 1; /* fix for Safari */
 }
-.image_inside {
-    position: absolute;
-    opacity: 0.6;
-    top: -10%;
-    left: 0;
-    width: 100%;
-    height: 115%;
-    background-size: cover;
-}
-
-.fill-background {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    position: fixed;
+.stage__image img {
+    height: 120%;
+    top: -20%;
 }

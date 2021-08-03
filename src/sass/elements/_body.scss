@@ -4,8 +4,9 @@
 
 body {
     @include f-reg();
+    background-color: var(--c-bg-light-1);
     color: var(--c-font-dark);
-    background-color: var(--c-bg-light);
+    // scroll-behavior: smooth;
 
     &.stop-scrolling {
         position: absolute;
@@ -15,4 +16,13 @@ body {
         height: 100%;
         overflow: hidden;
     }
+}
+
+#viewport {
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
 }

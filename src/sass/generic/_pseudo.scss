@@ -6,21 +6,21 @@
     Placeholder
 \*----------------------------------------------*/
 
-// ::-webkit-input-placeholder {
+::-webkit-input-placeholder {
+    // ...
+}
 
-// }
+::-moz-placeholder {
+    // ...
+}
 
-// ::-moz-placeholder {
+:-ms-input-placeholder {
+    // ...
+}
 
-// }
-
-// :-ms-input-placeholder {
-
-// }
-
-// :-moz-placeholder {
-
-// }
+:-moz-placeholder {
+    // ...
+}
 
 /*----------------------------------------------*\
     Select
@@ -28,12 +28,12 @@
 \*----------------------------------------------*/
 
 ::-moz-selection {
-    color: var(--c-light);
+    color: var(--c-lightest);
     background-color: var(--c-primary);
 }
 
 ::selection {
-    color: var(--c-light);
+    color: var(--c-lightest);
     background-color: var(--c-primary);
 }
 

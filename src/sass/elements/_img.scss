@@ -2,11 +2,18 @@
    Images
 \*------------------------------------*/
 
-img, 
-.img, 
-picture, 
+img,
+.img,
+picture,
 .picture {
-    display: block;
+    // display: block;
+    // width: 100%;
+    // height: auto;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-position: 50% 50%;
 }

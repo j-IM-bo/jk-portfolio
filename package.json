@@ -1,8 +1,8 @@
 {
-    "name": "james-keefe-portfolio",
-    "description": "",
+    "name": "james-keefe-portfolio-2021",
     "version": "1.0.0",
     "main": "index.js",
+    "description": "",
     "author": "jk",
     "license": "ISC",
     "scripts": {
@@ -21,7 +21,7 @@
         "file-loader": "^6.2.0",
         "html-webpack-plugin": "^5.3.2",
         "mini-css-extract-plugin": "^2.1.0",
-        "postcss": "^8.3.6",
+        "postcss": "^8.3.5",
         "postcss-loader": "^6.1.1",
         "postcss-preset-env": "^6.7.0",
         "sass": "^1.35.2",
@@ -32,6 +32,7 @@
         "webpack-dev-server": "^3.11.2"
     },
     "dependencies": {
-        "gsap": "^3.7.1"
+        "gsap": "^3.7.1",
+        "smooth-scrollbar": "^8.6.3"
     }
 }

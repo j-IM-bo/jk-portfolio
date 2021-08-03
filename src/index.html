@@ -39,186 +39,94 @@
     </head>
 
     <body class="js-body">
-        <header class="header js-header">
-            <div class="header__inner">
-                <a
-                    href="./index.html"
-                    class="header__site-link js-site-link"
-                    aria-label="logo"
-                >
-                    James Keefe
-                    <span class="visually-hidden">logo</span>
-                </a>
-                <nav class="header__site-nav">
-                    <ul class="header__nav-list">
-                        <li class="header__nav-list-item">
-                            <a href="#profile" class="header__nav-link"
-                                >Profile</a
-                            >
-                        </li>
-                        <li class="header__nav-list-item">
-                            <a href="#front-end" class="header__nav-link"
-                                >Front-end</a
-                            >
-                        </li>
-                        <li class="header__nav-list-item">
-                            <a href="#design" class="header__nav-link"
-                                >Design</a
-                            >
-                        </li>
-                        <li class="header__nav-list-item">
-                            <a href="#contact" class="header__nav-link"
-                                >Contact</a
-                            >
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+        <div id="viewport">
+            <main>
+                <section style="height: 100vh"></section>
 
-            <!-- menu button object -->
-            <button aria-label="menu-button" class="menu-button js-menu-btn">
-                <span class="x"></span>
-                <span class="z"></span>
-                <span class="visually-hidden">Menu</span>
-            </button>
-            <!-- menu component -->
-            <div aria-label="menu" class="menu js-menu">
-                <nav class="menu__nav">
-                    <ul class="menu__list">
-                        <li class="menu__list-item js-menu-item">
-                            <a href="#profile" class="menu__link">Profile</a>
-                        </li>
-                        <li class="menu__list-item js-menu-item">
-                            <a href="#front-end" class="menu__link"
-                                >Front-end</a
-                            >
-                        </li>
-                        <li class="menu__list-item js-menu-item">
-                            <a href="#design" class="menu__link">Design</a>
-                        </li>
-                        <li class="menu__list-item js-menu-item">
-                            <a href="#contact" class="menu__link">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="alien-icon js-alien-icon">
-                    <img src="./images/alien-icon-sm.svg" alt="alien icon" />
-                </div>
-            </div>
-            <!-- /end .menu -->
-        </header>
+                <!-- Front-end section -->
+                <section class="front-end with-padding">
+                    <h2 class="chapter"><span>001 /</span> Front-end</h2>
 
-        <main>
-            <!-- profile section -->
-            <section id="profile" class="section" data-color="#E8E8E2">
-                <div class="profile">
-                    <div class="profile__inner">
-                        <!-- <div class="profile__title">
-                            <h1>Now then!</h1>
-                            <h1>I'm James.</h1>
-                        </div>
-                        <div class="profile__about">
-                            <p>
-                                I’ve been working as a designer for the past six
-                                years. In that time I have worked on some
-                                amazing projects, learnt a lot, and met some
-                                great people along the way.
-                            </p>
-                        </div>
-                    </div> -->
-                    <div class="cta__circle">
-                        <img src="./images/cta-circle.svg" alt="scroll down" />
-                        <span class="visually-hidden"
-                            >call to action - scroll down</span
-                        >
+                    <div class="fixed-nav">
+                        <ul>
+                            <li class="is-active">
+                                <a href="#stage1">Project One</a>
+                            </li>
+                            <li><a href="#stage2">Project Two</a></li>
+                            <li><a href="#stage3">Project Three</a></li>
+                            <li><a href="#stage4">Project Four</a></li>
+                        </ul>
                     </div>
-                </div>
-            </section>
-            <!-- /end .profile-->
 
-            <!-- Front-end section-->
-            <section class="front-end">
-                <div class="fe__par">
-                    <p>
-                        I have been exploring front-end development and
-                        partaking in online courses and self-initiated learning.
-                        I am looking for a new challenge as a front-end
-                        developer to grow both personally, and professionally.
-                    </p>
-                    <p>
-                        Have a browse below at some of my front-end experiments
-                        and if you would like to get in touch, drop me a
-                        message. I'm looking for a full-time, junior front-end
-                        position.
-                    </p>
-                </div>
-                <div class="fe__categories">
-                    <a
-                        href="https://manage-lp.netlify.app/"
-                        target="_blank"
-                        data-color="#1D1E25"
-                        data-imagelarge="./images/manage-landing-page.jpg"
-                    >
-                        Manage Landing Page
-                    </a>
-                    <div class="fe__divider"></div>
-                    <a
-                        href="#"
-                        data-color="#1D1E25"
-                        data-imagelarge="./images/manage-landing-page.jpg"
-                    >
-                        Project two
-                    </a>
-                    <div class="fe__divider"></div>
-                    <a
-                        href="#"
-                        data-color="#1D1E25"
-                        data-imagelarge="./images/manage-landing-page.jpg"
-                    >
-                        Project three
-                    </a>
-                    <div class="fe__divider"></div>
-                    <a
-                        href="#"
-                        data-color="#1D1E25"
-                        data-imagelarge="./images/manage-landing-page.jpg"
-                    >
-                        Project four
-                    </a>
-                    <div class="fe__divider"></div>
-                    <a
-                        href="#"
-                        data-color="#1D1E25"
-                        data-imagelarge="./images/manage-landing-page.jpg"
-                    >
-                        Project five
-                    </a>
-                </div>
-                <div class="fe__image">
-                    <div class="image_inside"></div>
-                </div>
-            </section>
+                    <div id="stage1" class="stage with-parallax">
+                        <div class="stage__image">
+                            <img
+                                src="./images/manage-landing-page.jpg"
+                                alt="manage landing page cover image"
+                            />
+                        </div>
 
-            <!-- /end .front-end -->
+                        <a href="https://manage-lp.netlify.app" target="_blank">
+                            <div class="stage__heading">
+                                <p>01</p>
+                                <h3>Manage Landing Page</h3>
+                            </div>
+                        </a>
+                    </div>
 
-            <section
-                id="design"
-                class="section"
-                data-color="#E8E8E2"
-                style="height: 100vh"
-            ></section>
-            <section
-                id="contact"
-                class="section"
-                data-color="#1C1C1C"
-                style="height: 100vh"
-            ></section>
-        </main>
+                    <div id="stage2" class="stage with-parallax">
+                        <div class="stage__image">
+                            <img
+                                src="./images/manage-landing-page.jpg"
+                                alt="manage landing page cover image"
+                            />
+                        </div>
+                        <a href="https://manage-lp.netlify.app" target="_blank">
+                            <div class="stage__heading">
+                                <p>02</p>
+                                <h3>Project two</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div id="stage3" class="stage with-parallax">
+                        <div class="stage__image">
+                            <img
+                                src="./images/manage-landing-page.jpg"
+                                alt="manage landing page cover image"
+                            />
+                        </div>
+                        <a href="https://manage-lp.netlify.app" target="_blank">
+                            <div class="stage__heading">
+                                <p>03</p>
+                                <h3>Project three</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div id="stage4" class="stage with-parallax">
+                        <div class="stage__image">
+                            <img
+                                src="./images/manage-landing-page.jpg"
+                                alt="manage landing page cover image"
+                            />
+                        </div>
+                        <a href="https://manage-lp.netlify.app" target="_blank">
+                            <div class="stage__heading">
+                                <p>04</p>
+                                <h3>Project four</h3>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+                <!-- /end .Front-end-->
+
+                <section style="height: 100vh"></section>
+            </main>
+        </div>
+        <!-- /end. #viewport -->
 
         <!-- footer -->
-        <footer class="footer"></footer>
-
-        <!-- fill background between sections with margin - eg. portfolio  -->
-        <aside class="fill-background"></aside>
+        <!-- <footer class="footer"></footer> -->
     </body>
 </html>

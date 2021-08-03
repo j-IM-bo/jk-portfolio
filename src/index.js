@@ -3,14 +3,17 @@ import "./sass/style.scss";
 
 //js
 // import { debounce } from "./js/utilities/debounce";
-import { menu } from "./js/components/menu";
-import { header } from "./js/components/header";
-import { initPortfolioHover } from "./js/components/front-end";
+import { initSmoothScrollbar } from "./js/utilities/smoothScrollbar";
+// import { menu } from "./js/menu";
+// import { header } from "./js/header";
+import { initImageParallax } from "./js/imageParallax";
+import { initPinSteps, initScrollTo } from "./js/front-end";
 
 function init() {
-    menu();
-    header();
-    initPortfolioHover();
+    initSmoothScrollbar();
+    initImageParallax();
+    initPinSteps();
+    initScrollTo();
 }
 
 window.addEventListener("load", function () {

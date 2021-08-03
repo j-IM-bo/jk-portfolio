@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    Sections
+\*------------------------------------*/
+
+main {
+    z-index: 1;
+    position: relative;
+}
+section {
+    position: relative;
+}
+.with-padding {
+    padding: var(--v-spacing) 0;
+}
+.with-padding-bottom {
+    padding-bottom: var(--v-spacing);
+}
+.chapter {
+    position: absolute;
+    left: var(--h-gutter);
+    top: var(--v-spacing);
+    z-index: 2;
+    color: var(--c-font-dark);
+    font-size: 1.6vw;
+}
+.chapter span {
+    opacity: 0.4;
+}

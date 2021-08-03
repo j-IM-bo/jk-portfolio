@@ -4,13 +4,9 @@
 \*------------------------------------*/
 :root {
     //colors & brand
-
-    --primary: #e8e8e2;
-    --secondary: #1c1c1c;
-    --light-grey: #7d7d7d;
-
     --black: #000000;
     --white: #ffffff;
+    --light-grey: #f2eee4;
 
     /*------------------------------------*\
     Semantics
@@ -22,18 +18,32 @@
     --c-placeholder: var(--light-grey);
 
     //use pallet
-    --c-primary: var(--primary);
-    --c-secondary: var(--secondary);
+    // --c-primary: var();
+    // --c-secondary: var();
 
     //typography
     //on dark backgrounds
-    --c-font-light: var(--primary);
-    --c-font-light-2: var(--light-grey);
+    // --c-font-lightest: var();
+    --c-font-light: var(--white);
+    // --c-font-mid: var();
 
     //on light backgrounds
-    --c-font-dark: var(--secondary);
+    // --c-font-darkest: var();
+    --c-font-dark: var(--black);
+
+    // --c-font-dark-1: var();
+    // --c-font-dark-2: var();
+    // --c-font-dark-3: var();
+    // --c-font-dark-4: var();
 
     //backgrounds
-    --c-bg-light: var(--primary);
-    --c-bg-dark: var(--secondary);
+    --c-bg-light-1: var(--white);
+    // --c-bg-light-2: var();
+    // --c-bg-light-3: var();
+
+    --c-bg-dark-1: var(--black);
+    // --c-bg-dark-2: var();
+    // --c-bg-dark-3: var();
+    // --c-bg-dark-4: var();
+    // --c-bg-dark-5: var();
 }
