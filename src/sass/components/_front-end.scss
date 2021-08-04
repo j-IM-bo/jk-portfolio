@@ -7,6 +7,11 @@
         top: 2vh;
     }
 
+    @include bp(small) {
+        .chapter {
+            top: 2.5vh;
+        }
+    }
     @include bp(medium) {
         .chapter {
             top: calc(var(--v-spacing) * 2);
@@ -15,12 +20,11 @@
 }
 
 .fe__intro {
-    width: calc(50vw + var(--h-gutter));
-    margin: var(--v-spacing) 33.33vw 0 var(--h-gutter);
+    margin: var(--v-spacing) var(--h-gutter) 0;
 
-    p {
-        font-size: 1.4vw;
-        line-height: 1.6;
+    @include bp(medium) {
+        width: calc(50vw + var(--h-gutter));
+        margin: var(--v-spacing) 33.33vw 0 var(--h-gutter);
     }
 }
 
@@ -48,6 +52,8 @@
             display: block;
             opacity: 0.4;
             transition: var(--transition);
+            font-size: 1.6rem;
+            line-height: 1.8;
 
             &::before {
                 @include pseudo();
@@ -98,6 +104,9 @@
     }
 
     @include bp(medium) {
+        h3 {
+            letter-spacing: -0.2vw;
+        }
         h3,
         p {
             left: 25vw;
@@ -117,7 +126,8 @@
     z-index: 1; /* fix for Safari */
     width: calc(100vw - var(--h-gutter));
     margin: 0 auto 20vw;
-    padding-bottom: 40vh;
+    padding-bottom: 60vw;
+    background-color: #000000;
 
     @include bp(medium) {
         width: calc(50vw + var(--h-gutter));
@@ -128,4 +138,10 @@
 .stage__image img {
     height: 120%;
     top: -20%;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+
+    &:hover {
+        opacity: 0.9;
+    }
 }

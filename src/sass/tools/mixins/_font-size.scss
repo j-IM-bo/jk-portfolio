@@ -65,13 +65,21 @@
 
 //body copy
 @mixin f-reg() {
-    font-size: 2.2rem;
-    line-height: 2rem;
+    font-size: 4vw;
+    line-height: 1.6;
     font-weight: normal;
 
+    @include bp(small) {
+        font-size: 2.4vw;
+        line-height: 1.8;
+    }
     @include bp(medium) {
-        font-size: 1.6rem;
-        line-height: 3rem;
+        font-size: 1.8vw;
+        line-height: 2;
+    }
+    @include bp(large) {
+        font-size: 1.2vw;
+        line-height: 1.8;
     }
 }
 
