@@ -39,12 +39,23 @@
         <meta name="theme-color" content="#ffffff" />
     </head>
 
-    <body class="js-body">
+    <!-- vanity loader -->
+    <div class="loader js-loader">
+        <div class="loader__title">
+            <div class="loader__title--mask">
+                <span><h1>Now then!</h1></span>
+            </div>
+            <div class="loader__title--mask">
+                <span><h1>I'm james</h1></span>
+            </div>
+        </div>
+    </div>
+    <body class="js-body stop-scrolling">
         <div id="viewport">
-            <main>
+            <main id="main">
                 <!-- About section -->
                 <section class="reveal-gallery">
-                    <h2 class="chapter js-about"><span>001 -</span> About</h2>
+                    <h2 class="chapter"><span>001 -</span> About</h2>
 
                     <div class="rg__column left">
                         <div class="rg__text">
@@ -54,8 +65,14 @@
                             </div>
                             <div class="rg__text--copy">
                                 <div class="rg__text--mask">
-                                    <p>Now then! My name is James.</p>
-                                    <p>
+                                    <p class="p__copy">
+                                        I’ve been working as a designer for the
+                                        past six years. In that time I have
+                                        worked on some amazing projects, learnt
+                                        a lot, and met some great people along
+                                        the way.
+                                        <br />
+                                        <br />
                                         Have a look at my work and if you would
                                         like to get in touch, feel free to send
                                         me an email or for further info download
@@ -75,9 +92,21 @@
                             <div class="rg__text--copy">
                                 <div class="rg__text--mask">
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur,
-                                        adipisicing elit. Voluptas aut
-                                        veritatis.
+                                        <span class="e__title">Work</span>
+                                        <br />
+                                        <span class="e__subtitle">
+                                            Beyond Publishing // Jun 2017 -
+                                            Present <br />
+                                            Graphic Designer
+                                        </span>
+                                        <br class="e-br" />
+                                        <span class="e__title">Education</span>
+                                        <br />
+                                        <span class="e__subtitle">
+                                            Leeds Arts University // 2012 - 15
+                                            <br />
+                                            BA(Hons) Graphic Design 2:1
+                                        </span>
                                     </p>
                                 </div>
                             </div>
@@ -93,11 +122,14 @@
                             <div class="rg__text--copy">
                                 <div class="rg__text--mask">
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur,
-                                        adipisicing elit. Voluptas aut veritatis
-                                        nostrum ratione quibusdam ea non
-                                        laudantium accusamus accusantium
-                                        molestias.
+                                        <a
+                                            class="email-link"
+                                            href="mailto: jameskeefe.digital@gmail.com"
+                                            >jameskeefe.digital@gmail.com</a
+                                        >
+                                        <a class="cv-btn" href="#" download
+                                            >Download resumé</a
+                                        >
                                     </p>
                                 </div>
                             </div>
@@ -107,23 +139,21 @@
                 <!-- /end .about -->
 
                 <!-- Design section -->
-                <div id="design" class="d__intro">
-                    <p>
-                        I’ve been working as a designer for the past six years.
-                        In that time I have worked on some amazing projects,
-                        learnt a lot, and met some great people along the way.
-                    </p>
-                </div>
-                <section class="design">
-                    <h2 class="chapter"><span>002 /</span> Graphic Design</h2>
+                <div id="design" class="design__wrapper">
+                    <section class="design">
+                        <h2 class="chapter">
+                            <span>002 /</span> Graphic Design
+                        </h2>
 
-                    <video autoplay muted loop>
-                        <source
-                            src="./images/james-keefe-graphic-design.mp4"
-                            type="video/mp4"
-                        />
-                    </video>
-                </section>
+                        <video autoplay muted loop>
+                            <source
+                                src="./images/james-keefe-graphic-design.mp4"
+                                type="video/mp4"
+                            />
+                        </video>
+                    </section>
+                </div>
+
                 <!-- /end .Design -->
 
                 <!-- Front-end section -->

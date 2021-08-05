@@ -2,24 +2,6 @@
     About Section
 \*------------------------------------*/
 
-// .rg__image {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     background-color: #000000;
-//     pointer-events: none;
-// }
-// .rg__image img {
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     position: absolute;
-//     object-fit: cover;
-//     object-position: 50% 50%;
-//     opacity: 0.8;
-// }
-
 /* =Reveal Gallery */
 .reveal-gallery {
     width: 100%;
@@ -27,9 +9,13 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
-    color: var(--text-color);
     position: relative;
     z-index: 1;
+    padding: var(--v-spacing) 0 5vh;
+
+    .chapter {
+        top: 5vh;
+    }
 }
 .rg__column {
     flex-grow: 1; /* equivalent to 33.33% */
@@ -39,33 +25,24 @@
     justify-content: center;
     position: relative;
     overflow: hidden;
-    min-height: 50vh;
-}
-.rg__text--heading h3 {
-    font-size: 3.6vw;
-    line-height: 1.192307692;
+    min-height: 20vh;
+    margin-bottom: 2vh;
+    width: 100%;
 }
 .rg__text--heading span {
-    font-size: 2vw;
+    font-size: 2.6vw;
+    margin: 0;
     opacity: 0.5;
-}
-.rg__text--heading h3,
-.rg__text--heading span,
-.chapter {
-    font-family: var(--font-headings);
-    font-weight: normal;
+
+    @include bp(medium) {
+        font-size: 1.8vw;
+    }
 }
 .rg__text {
     z-index: 1;
     position: relative;
 }
-.rg__text--copy {
-    font-weight: 300;
-    letter-spacing: 0.03vw;
-}
-.rg__text--copy p {
-    margin: 0;
-}
+
 .rg__column::before {
     display: block;
     position: absolute;
@@ -75,26 +52,77 @@
     width: 1px;
     height: 20vh;
     transform: translateY(-50%);
-    background-color: var(--text-color);
+    background-color: var(--c-bg-dark-1);
     opacity: 0.4;
 }
-// .rg__image {
-//     width: 100%;
-//     height: 100%;
-//     overflow: hidden;
-// }
-// .rg__image--mask {
-//     height: 100%;
-//     overflow: hidden;
-// }
-// .rg__image img {
-//     opacity: 0.6;
-// }
+
 .rg__text--mask {
     overflow: hidden;
 }
 
-@media only screen and (min-width: 768px) {
+.e__title {
+    font-weight: 500;
+    font-size: 3.8vw;
+
+    @include bp(small) {
+        font-size: 3vw;
+    }
+    @include bp(medium) {
+        font-size: 2vw;
+    }
+    @include bp(large) {
+        font-size: 1.4vw;
+    }
+}
+
+.e__subtitle,
+.email-link,
+.cv-btn,
+.p__copy {
+    font-size: 3.5vw;
+
+    @include bp(small) {
+        font-size: 2.4vw;
+    }
+    @include bp(medium) {
+        font-size: 1.4vw;
+    }
+    @include bp(large) {
+        font-size: 1vw;
+    }
+}
+
+.email-link {
+    transition: var(--transition);
+    margin-bottom: 0.8rem;
+    &:hover {
+        color: #727272;
+    }
+}
+
+.cv-btn {
+    position: relative;
+    padding-left: 1.8vw;
+    transform: translateX(-1.8vw);
+    display: block;
+    transition: var(--transition);
+
+    &:hover {
+        color: #727272;
+        transform: translateX(0);
+    }
+
+    &::before {
+        @include pseudo();
+        height: 2px;
+        width: 1.3vw;
+        background-color: var(--c-bg-dark-1);
+        top: 50%;
+        left: 0;
+    }
+}
+
+@media only screen and (min-width: 900px) {
     /* =Reveal Gallery */
     .reveal-gallery {
         flex-direction: row;
@@ -108,6 +136,6 @@
         overflow: hidden;
     }
     .rg__text {
-        // max-width: 17vw;
+        width: auto;
     }
 }

@@ -2,7 +2,7 @@
 import "./sass/style.scss";
 
 //js
-import { gsap } from "gsap";
+import { gsap, Power4 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Scrollbar from "smooth-scrollbar";
 
@@ -15,7 +15,7 @@ const selectAll = (e) => document.querySelectorAll(e);
 
 const sections = selectAll(".rg__column");
 
-const mq = window.matchMedia("(min-width: 768px)");
+const mq = window.matchMedia("(min-width: 900px)");
 
 // add change listener to this breakpoint
 mq.addListener(handleWidthChange);
@@ -42,6 +42,7 @@ function handleWidthChange() {
     // check if we are on the right breakpoint
     if (mq.matches) {
         // set up hover animation
+        loader();
         initHoverReveal();
         initSmoothScrollbar();
         initImageParallax();
@@ -51,6 +52,7 @@ function handleWidthChange() {
         // width is less than 768px
         console.log("mobile view");
 
+        loader();
         initSmoothScrollbar();
 
         // remove event listeners for each section
@@ -75,6 +77,30 @@ function handleWidthChange() {
 // window.addEventListener("load", function () {
 //     init();
 // });
+
+// vanity loader
+function loader() {
+    const body = document.querySelector(".js-body"),
+        loader = document.querySelector(".js-loader"),
+        loaderTl = gsap.timeline({ paused: true, onComplete: rmLoader }),
+        stopScrollingClass = "stop-scrolling";
+
+    //loader timeline
+    loaderTl
+        .to(loader, 0.6, { yPercent: -100, ease: Power4.easeInOut }, "+=1")
+        .from("#main", 0.6, { y: 150 }, "-=0.4");
+
+    window.addEventListener("load", (event) => {
+        //start timeline
+        loaderTl.restart();
+    });
+
+    function rmLoader() {
+        //remove stop scrolling from body
+        body.classList.remove(stopScrollingClass);
+        gsap.to(loader, 0.3, { autoAlpha: 0 });
+    }
+}
 
 const getTextHeight = (textCopy) => {
     return textCopy.clientHeight;

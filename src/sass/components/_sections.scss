@@ -22,6 +22,7 @@ section {
     z-index: 2;
     color: var(--c-font-dark);
     font-size: 3.6vw;
+    font-weight: 300;
     letter-spacing: -0.1vw;
 
     @include bp(small) {
