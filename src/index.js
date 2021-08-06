@@ -2,7 +2,7 @@
 import "./sass/style.scss";
 
 //js
-import { gsap, Power4 } from "gsap";
+import { gsap, Power1, Power2, Power3, Power4 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Scrollbar from "smooth-scrollbar";
 
@@ -52,9 +52,6 @@ function handleWidthChange() {
         // width is less than 768px
         console.log("mobile view");
 
-        loader();
-        initSmoothScrollbar();
-
         // remove event listeners for each section
         sections.forEach((section) => {
             section.removeEventListener("mouseenter", createHoverReveal);
@@ -63,6 +60,10 @@ function handleWidthChange() {
             const { text, textCopy, textMask, textP } = section;
             resetProps([text, textCopy, textMask, textP]);
         });
+
+        loader();
+        initSmoothScrollbar();
+        initImageParallax();
     }
 }
 
@@ -82,13 +83,25 @@ function handleWidthChange() {
 function loader() {
     const body = document.querySelector(".js-body"),
         loader = document.querySelector(".js-loader"),
+        loaderTitle = document.querySelector(".loader__title"),
+        line1 = select(".loader__title--mask:nth-child(1) span"),
+        line2 = select(".loader__title--mask:nth-child(2) span"),
+        line3 = select(".loader__title--mask:nth-child(3) span"),
+        line4 = select(".loader__title--mask:nth-child(4) span"),
         loaderTl = gsap.timeline({ paused: true, onComplete: rmLoader }),
         stopScrollingClass = "stop-scrolling";
 
     //loader timeline
     loaderTl
-        .to(loader, 0.6, { yPercent: -100, ease: Power4.easeInOut }, "+=1")
-        .from("#main", 0.6, { y: 150 }, "-=0.4");
+        .from([line1, line2, line3, line4], 0.9, {
+            autoAlpha: 0,
+            yPercent: 130,
+            stagger: 0.1,
+            delay: 0.2,
+            ease: Power2.easeInOut
+        })
+        .to(loader, 0.7, { yPercent: -100, ease: Power2.easeInOut }, "+=0.2")
+        .from("#main", { y: 150 }, "-=0.4");
 
     window.addEventListener("load", (event) => {
         //start timeline

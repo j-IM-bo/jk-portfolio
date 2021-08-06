@@ -16,25 +16,17 @@
     @include z-index(level10);
 }
 
-.loader__inner {
-    position: relative;
-    width: 24rem;
-    display: block;
-    overflow: hidden;
-}
-
 .loader__title {
     font-size: 7vw;
-    line-height: 8vw;
+    line-height: 5vw;
     margin: 0;
-    font-family: var(--font-headings);
-    color: var(--c-f-light);
-    font-weight: normal;
+    color: #f8f8ff;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 5;
+    width: 24rem;
 }
 .loader__title--mask {
     overflow: hidden;

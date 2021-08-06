@@ -1,0 +1,51 @@
+/*------------------------------------*\
+    Footer section
+\*------------------------------------*/
+
+.footer {
+    width: 100vw;
+    height: 10vh;
+    background: #1c1c1c;
+    position: relative;
+}
+
+.footer_inner {
+    margin: 0 var(--h-gutter);
+    color: var(--c-font-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.footer__logo {
+    width: 8vw;
+    height: auto;
+
+    @include bp(small) {
+        width: 4vw;
+    }
+    @include bp(medium) {
+        width: 3vw;
+    }
+    @include bp(large) {
+        width: 2vw;
+    }
+}
+
+.footer__email {
+    a {
+        font-size: 4vw;
+        margin: 0;
+
+        @include bp(small) {
+            font-size: 3vw;
+        }
+        @include bp(medium) {
+            font-size: 2vw;
+        }
+        @include bp(large) {
+            font-size: 1.8vw;
+        }
+    }
+}
