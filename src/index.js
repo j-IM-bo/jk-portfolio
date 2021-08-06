@@ -100,7 +100,13 @@ function loader() {
             delay: 0.2,
             ease: Power2.easeInOut
         })
-        .to(loader, 0.7, { yPercent: -100, ease: Power2.easeInOut }, "+=0.2")
+        .to(
+            loaderTitle,
+            0.6,
+            { yPercent: -100, ease: Power2.easeInOut },
+            "-=0.1"
+        )
+        .to(loader, 0.6, { yPercent: -100, ease: Power2.easeInOut }, "-=0.3")
         .from("#main", { y: 150 }, "-=0.4");
 
     window.addEventListener("load", (event) => {

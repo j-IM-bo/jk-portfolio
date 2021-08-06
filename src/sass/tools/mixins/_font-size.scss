@@ -4,18 +4,18 @@
 
 //extra large
 @mixin f-xl() {
-    font-size: 4rem;
+    font-size: 10vw;
     line-height: 3.4rem;
     letter-spacing: 0;
     font-weight: 700;
 
     @include bp(small) {
-        font-size: 5rem;
+        font-size: 6.4vw;
         line-height: 4.2rem;
     }
 
     @include bp(medium) {
-        font-size: 7rem;
+        font-size: 3.5vw;
         line-height: 6rem;
     }
 }

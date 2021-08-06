@@ -139,3 +139,38 @@
         width: auto;
     }
 }
+
+// cta circle
+.cta__circle {
+    width: 22vw;
+    height: auto;
+    position: absolute;
+    top: auto;
+    bottom: 8vh;
+    right: 6vw;
+    pointer-events: none;
+    animation: rotation 45s linear infinite;
+
+    @include bp(small) {
+        width: 15vw;
+        bottom: 4vh;
+    }
+    @include bp(medium) {
+        width: 10vw;
+        right: 3vw;
+    }
+    @include bp(large) {
+        width: 8vw;
+        bottom: 4vh;
+        right: 3vw;
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
