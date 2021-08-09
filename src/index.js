@@ -67,23 +67,11 @@ function handleWidthChange() {
     }
 }
 
-// function init() {
-//     initSmoothScrollbar();
-//     initHoverReveal();
-//     initImageParallax();
-//     initPinSteps();
-//     initScrollTo();
-// }
-
-// window.addEventListener("load", function () {
-//     init();
-// });
-
 // vanity loader
 function loader() {
-    const body = document.querySelector(".js-body"),
-        loader = document.querySelector(".js-loader"),
-        loaderTitle = document.querySelector(".loader__title"),
+    const body = select(".js-body"),
+        loader = select(".js-loader"),
+        loaderTitle = select(".loader__title"),
         line1 = select(".loader__title--mask:nth-child(1) span"),
         line2 = select(".loader__title--mask:nth-child(2) span"),
         line3 = select(".loader__title--mask:nth-child(3) span"),
@@ -122,13 +110,9 @@ function loader() {
     }
 }
 
-const getTextHeight = (textCopy) => {
-    return textCopy.clientHeight;
-};
-
-// Smoooth Scrollbar
+// Smooth Scrollbar
 function initSmoothScrollbar() {
-    bodyScrollBar = Scrollbar.init(document.querySelector("#viewport"), {
+    bodyScrollBar = Scrollbar.init(select("#viewport"), {
         damping: 0.07
     });
 
@@ -156,6 +140,10 @@ function initSmoothScrollbar() {
 }
 
 // Reveal Gallery
+const getTextHeight = (textCopy) => {
+    return textCopy.clientHeight;
+};
+
 function initHoverReveal() {
     sections.forEach((section) => {
         // get componenets for animation
