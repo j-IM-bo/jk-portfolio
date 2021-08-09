@@ -91,8 +91,8 @@ function loader() {
         loaderTl = gsap.timeline({ paused: true, onComplete: rmLoader }),
         stopScrollingClass = "stop-scrolling";
 
-    gsap.set([line1, line2, line3, line4], { autoAlpha: 0, yPercent: 130 });
     //loader timeline
+    gsap.set([line1, line2, line3, line4], { autoAlpha: 0, yPercent: 130 });
     loaderTl
         .to([line1, line2, line3, line4], 0.9, {
             autoAlpha: 1,
