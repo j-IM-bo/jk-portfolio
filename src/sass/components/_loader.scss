@@ -33,4 +33,6 @@
 }
 .loader__title--mask span {
     display: block;
+    opacity: 0;
+    transform: translateY(100%);
 }
